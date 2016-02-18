@@ -9,7 +9,9 @@ module.exports = think.controller(Base, {
    */
   * indexAction(self) {
    let model = this.model("task");
-   let insertId = yield model.add({ title: "xxx", content: "yyy"});
+   //let insertId = yield model.add({ title: "xxx", content: "yyy"});
+   let tasks = yield model.select();
+   console.log(tasks);
    return self.display();
   }
 });
