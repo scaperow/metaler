@@ -6,5 +6,5 @@
  */
 
 module.exports = {
-
+ controller_before: ["append", "validation"]
 }

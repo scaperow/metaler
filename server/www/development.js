@@ -2,7 +2,7 @@ var thinkjs = require('thinkjs');
 var path = require('path');
 var moment = require('moment');
 var rootPath = path.dirname(__dirname);
-
+var token = require('token');
 var instance = new thinkjs({
   APP_PATH: rootPath + path.sep + 'app',
   RUNTIME_PATH: rootPath + path.sep + 'runtime',
@@ -10,4 +10,8 @@ var instance = new thinkjs({
   RESOURCE_PATH: __dirname,
   env: 'development'
 });
+token.defaults.secret = 'AAB';
+token.defaults.timeStep = 24 * 60 * 60; // 24h in seconds
+
+think.hook("controller_before", ["validation"],"append");
 instance.run();
