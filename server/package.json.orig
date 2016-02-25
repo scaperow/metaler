@@ -1,0 +1,20 @@
+{
+  "name": "thinkjs-application",
+  "description": "application created by thinkjs",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node www/development.js"
+  },
+  "dependencies": {
+<<<<<<< HEAD
+    "thinkjs": "2.1.x",
+    "token": "0.0.0"
+=======
+    "moment": "^2.11.2",
+    "passport": "^0.3.2",
+    "thinkjs": "2.1.x"
+>>>>>>> e98ee871adbd6305efe55a0a5e3533cf2e5bbce4
+  },
+  "repository": "",
+  "license": "MIT"
+}
