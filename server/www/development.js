@@ -15,3 +15,5 @@ token.defaults.timeStep = 24 * 60 * 60; // 24h in seconds
 
 think.hook("controller_before", ["validation"],"append");
 instance.run();
+
+

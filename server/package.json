@@ -6,8 +6,9 @@
     "start": "node www/development.js"
   },
   "dependencies": {
-    "thinkjs": "2.1.x",
-    "token": "0.0.0"
+    "moment": "^2.11.2",
+    "passport": "^0.3.2",
+    "thinkjs": "2.1.x"
   },
   "repository": "",
   "license": "MIT"
