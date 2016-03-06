@@ -1,34 +1,10 @@
 var thinkjs = require('thinkjs');
 var path = require('path');
-var passport = require('passport');
 var rootPath = path.dirname(__dirname);
-<<<<<<< HEAD
 var token = require('token');
-=======
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
->>>>>>> e98ee871adbd6305efe55a0a5e3533cf2e5bbce4
-var instance = new thinkjs({
- APP_PATH: rootPath + path.sep + 'app',
- RUNTIME_PATH: rootPath + path.sep + 'runtime',
- ROOT_PATH: rootPath,
- RESOURCE_PATH: __dirname,
- env: 'development'
-});
-<<<<<<< HEAD
 token.defaults.secret = 'AAB';
 token.defaults.timeStep = 24 * 60 * 60; // 24h in seconds
 
 think.hook("controller_before", ["validation"],"append");
-=======
-passport.use(new LocalStrategy(
- function(username, password, done) {
-   console.log('aaa');
-  if (username !== 'aaa') {
-   return done(null, false);
-  }
-  return done(null, user);
- }
-));
->>>>>>> e98ee871adbd6305efe55a0a5e3533cf2e5bbce4
+
 instance.run();

@@ -6,22 +6,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.scaperow.metaler.TaskFragment.OnListFragmentInteractionListener;
-import com.scaperow.metaler.dummy.DummyContent.DummyItem;
+import com.scaperow.metaler.TaskFragment.OnTaskFragmentInteractionListener;
+import com.scaperow.metaler.dummy.TaskContent;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
+ * specified {@link TaskFragment.OnTaskFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
 public class TaskRecyclerViewAdapter extends RecyclerView.Adapter<TaskRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
-    private final OnListFragmentInteractionListener mListener;
+    private final List<TaskContent.TaskItem> mValues;
+    private final OnTaskFragmentInteractionListener mListener;
 
-    public TaskRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public TaskRecyclerViewAdapter(List<TaskContent.TaskItem> items, OnTaskFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -29,15 +30,18 @@ public class TaskRecyclerViewAdapter extends RecyclerView.Adapter<TaskRecyclerVi
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_item, parent, false);
+                .inflate(R.layout.fragment_task, parent, false);
         return new ViewHolder(view);
     }
 
+    SimpleDateFormat formatter =
+            new SimpleDateFormat("yyyy-MM-dd");
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.mContentView.setText(mValues.get(position).title);
+        holder.mCreateTimeView.setText(formatter.format((mValues.get(position).create_time)));
+        holder.mPriceTimeView.setText(mValues.get(position).price+"元");
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,15 +62,17 @@ public class TaskRecyclerViewAdapter extends RecyclerView.Adapter<TaskRecyclerVi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-        public final TextView mIdView;
         public final TextView mContentView;
-        public DummyItem mItem;
+        public final TextView mCreateTimeView;
+        public final TextView mPriceTimeView;
+        public TaskContent.TaskItem mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mIdView = (TextView) view.findViewById(R.id.id);
-            mContentView = (TextView) view.findViewById(R.id.content);
+            mContentView = (TextView) view.findViewById(R.id.task_title);
+            mCreateTimeView = (TextView) view.findViewById(R.id.task_create_time);
+            mPriceTimeView = (TextView) view.findViewById(R.id.task_price);
         }
 
         @Override

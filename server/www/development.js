@@ -12,8 +12,6 @@ var instance = new thinkjs({
 });
 token.defaults.secret = 'AAB';
 token.defaults.timeStep = 24 * 60 * 60; // 24h in seconds
-
+think.config('host', '0.0.0.0')
 think.hook("controller_before", ["validation"],"append");
 instance.run();
-
-

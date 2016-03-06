@@ -9,17 +9,16 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by Ben on 2016/2/23.
  */
 public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
-    final int PAGE_COUNT = 2;
-    private String tabTitles[] = new String[]{"广场", "我的"};
+    final int PAGE_COUNT = 4;
+    private String tabTitles[] = new String[]{"首页", "广场", "发现", "我的"};
     private Context context;
     private TaskFragment task;
-
 
     public MainFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
         this.task = new TaskFragment();
-//        this.master = new MasterFragment();
+//      this.master = new MasterFragment();
     }
 
     @Override
@@ -31,15 +30,19 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return task;
+                return new HomeFragment();
 
             case 1:
                 return PageFragment.newInstance(position + 1);
 
-            default:
+            case 2:
+                return PageFragment.newInstance(position + 1);
+
+            case 3:
                 return PageFragment.newInstance(position + 1);
         }
 
+        return null;
     }
 
     @Override
