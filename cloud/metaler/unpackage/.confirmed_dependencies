@@ -1,0 +1,34 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"images/cbd.jpg",
+			"images/yuantiao.jpg",
+			"images/muwu.jpg",
+			"images/shuijiao.jpg",
+			"html/task_detail.html",
+			"images/60x60.gif"
+		],
+		"refer": [
+			"html/task_detail.html"
+		]
+	},
+	"html/task_detail.html": {
+		"resources": [
+			"index.html",
+			"css/mui.min.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/app.css",
+			"images/60x60.gif",
+			"images/photo.png",
+			"images/shuijiao.jpg"
+		],
+		"refer": [
+			"index.html"
+		]
+	}
+}
