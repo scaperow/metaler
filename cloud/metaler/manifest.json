@@ -23,9 +23,7 @@
         "Audio": {
             "description": "访问麦克风"
         },
-        "Messaging":{
-        	"description": "短彩邮件插件"
-        },
+        
         "Cache": {
             "description": "管理应用缓存"
         },
@@ -213,9 +211,12 @@
 					"images/muwu.jpg",
 					"images/shuijiao.jpg",
 					"html/task_detail.html",
-					"images/60x60.gif"
+					"images/60x60.gif",
+					"images/photo.png"
 				],
-				"refer": [],
+				"refer": [
+					"html/task_create.html"
+				],
 				"priority": 0
 			},
 			"html/task_detail.html": {
@@ -228,6 +229,16 @@
 					"images/60x60.gif",
 					"images/photo.png",
 					"images/shuijiao.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/task_create.html": {
+				"resources": [
+					"css/app.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -247,5 +258,5 @@
 				"css/mui.picker.css"
 			]
 		}
-	}
+	},"fullscreen":true
 }

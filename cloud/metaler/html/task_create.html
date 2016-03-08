@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.min.js"></script>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">发布订单</h1>
+		</header>
+		<div class="mui-content">
+
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>标题</label>
+					<input type="text" placeholder="">
+				</div>
+				<div class="mui-input-row">
+					<label>地址</label>
+					<input type="text" class="mui-input-clear" placeholder="">
+				</div>
+				<div class="mui-input-row">
+					<label>类别</label>
+					<input type="text" class="mui-input-clear" placeholder="">
+				</div>
+			
+				<div class="mui-input-row">
+					<label>金币</label>
+					<div class="mui-numbox">
+						<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+						<input class="mui-input-numbox" type="number" />
+						<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+					</div>
+				</div>
+					<div class="mui-input-row" style="height: auto;">
+					<label>描述</label>
+					<textarea id="textarea" rows="5" placeholder=""></textarea>
+				</div>
+			</form>
+
+			<div class="mui-bar-footer padding">
+				<button class="mui-btn mui-btn-primary mui-btn-block">立即发布</button>
+			</div>
+		</div>
+	</body>
+
+</html>

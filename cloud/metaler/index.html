@@ -23,6 +23,9 @@
 				<span class="mui-icon mui-icon-location"></span> 西安市
 			</button>
 			<h1 class="mui-title">金工</h1>
+			<button type="button" onclick="createTask()" class="mui-pull-right mui-btn mui-btn-link">
+				发布订单
+			</button>
 		</header>
 		<nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item mui-active" href="#tabbar">
@@ -120,12 +123,14 @@
 					</li>
 				</ul>
 
-				<ul class="mui-table-view" style="padding-top:12px; padding-left:12px; padding-right:12px">
-					<p class="mui-inline">推荐订单</p>
+				<ul class="mui-table-view">
+					<div style="padding-top:12px; padding-left:12px; padding-right:12px">
+						<p class="mui-inline">推荐订单</p>
 
-					<button type="button" class="mui-inline mui-btn mui-btn-link mui-pull-right" style="padding:0">
-						查看更多
-					</button>
+						<button type="button" class="mui-inline mui-btn mui-btn-link mui-pull-right" style="padding:0">
+							查看更多
+						</button>
+					</div>
 					<li class="mui-table-view-cell ">
 						<a href="javascript:showDetail();">
 							<p>2015年3月4日</p>
@@ -163,14 +168,19 @@
 				可接订单
 			</a>
 							<a class="mui-control-item" href="#item3mobile">
-				未完成的
+				已完成的
 			</a>
+						</div>
+						<div class="mui-input-row mui-search">
+							<input type="search" class="mui-input-clear" placeholder="搜索订单">
 						</div>
 						<!--<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>-->
 						<div class="mui-slider-group">
 							<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
-								<ul class="mui-table-view" >
+
+								<ul class="mui-table-view">
 									<li class="mui-table-view-cell ">
+
 										<a href="javascript:showDetail();">
 											<p>2015年3月4日</p>
 											<div class="mui-ellipsis-2">
@@ -231,7 +241,7 @@
 											<span class="price">240</span>
 										</a>
 									</li>
-									<li class="mui-table-view-cell">
+									<li class="mui-table-view-cell">javascript:showDetail();
 
 										<a href="javascript:showDetail();">
 											<p>2015年3月4日</p>
@@ -242,7 +252,7 @@
 								</ul>
 							</div>
 							<div id="item2mobile" class="mui-slider-item mui-control-content">
-								<ul class="mui-table-view" >
+								<ul class="mui-table-view">
 									<li class="mui-table-view-cell ">
 										<a href="javascript:showDetail();">
 											<p>2015年3月4日</p>
@@ -316,7 +326,7 @@
 
 							</div>
 							<div id="item3mobile" class="mui-slider-item mui-control-content">
-								<ul class="mui-table-view" >
+								<ul class="mui-table-view">
 									<li class="mui-table-view-cell ">
 										<a href="javascript:showDetail();">
 											<p>2015年3月4日</p>
@@ -394,131 +404,47 @@
 				</div>
 			</div>
 			<div id="tabbar-with-contact" class="mui-control-content">
-				<div class="title">这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
-				<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
-					<li class="mui-table-view-cell">
-						<div class="mui-slider-cell">
-							<div class="oa-contact-cell mui-table">
-								<div class="oa-contact-avatar mui-table-cell">
-									<img src="images/60x60.gif" />
-								</div>
-								<div class="oa-contact-content mui-table-cell">
-									<div class="mui-clearfix">
-										<h4 class="oa-contact-name">叶文洁</h4>
-										<span class="oa-contact-position mui-h6">董事长</span>
-									</div>
-									<p class="oa-contact-email mui-h6">
-										yewenjie@sina.com
-									</p>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="mui-table-view-cell">
-						<div class="mui-slider-cell">
-							<div class="oa-contact-cell mui-table">
-								<div class="oa-contact-avatar mui-table-cell">
-									<img src="../images/60x60.gif" />
-								</div>
-								<div class="oa-contact-content mui-table-cell">
-									<div class="mui-clearfix">
-										<h4 class="oa-contact-name">艾AA</h4>
-										<span class="oa-contact-position mui-h6">总经理</span>
-									</div>
-									<p class="oa-contact-email mui-h6">
-										aaa@163.com
-									</p>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="mui-table-view-cell">
-						<div class="mui-slider-cell">
-							<div class="oa-contact-cell mui-table">
-								<div class="oa-contact-avatar mui-table-cell">
-									<img src="../images/60x60.gif" />
-								</div>
-								<div class="oa-contact-content mui-table-cell">
-									<div class="mui-clearfix">
-										<h4 class="oa-contact-name">罗辑</h4>
-										<span class="oa-contact-position mui-h6">员工</span>
-									</div>
-									<p class="oa-contact-email mui-h6">
-										luoji@126.com
-									</p>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="mui-table-view-cell">
-						<div class="mui-slider-cell">
-							<div class="oa-contact-cell mui-table">
-								<div class="oa-contact-avatar mui-table-cell">
-									<img src="../images/60x60.gif" />
-								</div>
-								<div class="oa-contact-content mui-table-cell">
-									<div class="mui-clearfix">
-										<h4 class="oa-contact-name">云天明</h4>
-										<span class="oa-contact-position mui-h6">员工</span>
-									</div>
-									<p class="oa-contact-email mui-h6">
-										ytm@163.com
-									</p>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="mui-table-view-cell">
-						<div class="mui-slider-cell">
-							<div class="oa-contact-cell mui-table">
-								<div class="oa-contact-avatar mui-table-cell">
-									<img src="../images/60x60.gif" />
-								</div>
-								<div class="oa-contact-content mui-table-cell">
-									<div class="mui-clearfix">
-										<h4 class="oa-contact-name">史强</h4>
-										<span class="oa-contact-position mui-h6">员工</span>
-									</div>
-									<p class="oa-contact-email mui-h6">
-										shiqiang@gmail.com
-									</p>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
+
 			</div>
 			<div id="tabbar-with-map" class="mui-control-content">
-				<div class="title">这是div模式选项卡中的第4个子页面，该页面展示一个常见的设置示例.</div>
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right" href="#account">
+							<img class="mui-media-object mui-pull-left head-img" id="head-img" src="images/photo.png">
+							<div class="mui-media-body">
+								刘伟
+								<p class='mui-ellipsis'>账号:hellomui</p>
+								<p class='mui-ellipsis'>余额:520元</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell">
+						<a href="#account" class="mui-navigate-right">账号与安全</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#account" class="mui-navigate-right">我的收藏</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#account" class="mui-navigate-right">我的交易</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#account" class="mui-navigate-right">账户余额</a>
+					</li>
+				</ul>
+			
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell">
+						<a href="#about" class="mui-navigate-right">关于金工 <p class="mui-pull-right ">版本 2.8.0</p></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#about" class="mui-navigate-right">联系客服 <p class="mui-pull-right">电话 8008208888</p></a>
+					</li>
+				</ul>
 				<ul class="mui-table-view">
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-						新消息通知
-					</a>
-					</li>
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-						隐私
-					</a>
-					</li>
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-						通用
-					</a>
-					</li>
-				</ul>
-				<ul class="mui-table-view" style="margin-top: 25px;">
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-						关于mui
-					</a>
-					</li>
-				</ul>
-				<ul class="mui-table-view" style="margin-top: 25px;">
-					<li class="mui-table-view-cell">
-						<a style="text-align: center;color: #FF3B30;">
-						退出登录
-					</a>
+					<li class="mui-table-view-cell" style="text-align: center;">
+						<a class="mui-btn-danger" style="color:white">退出登录</a>
 					</li>
 				</ul>
 			</div>
@@ -534,6 +460,12 @@
 		slider.slider({
 			interval: 2000
 		});
+		
+		var createTask = function(){
+			mui.openWindow({
+				url:'./html/task_create.html'
+			});
+		}
 		var showDetail = function() {
 			mui.openWindow({
 				url: './html/task_detail.html'
